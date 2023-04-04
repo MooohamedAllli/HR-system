@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sign up page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.4.1.min.js"></script>
+        <script> 
+            $(document).ready(function ()
+            {
+                $("div").get("/checkUserName",{UserName:username},(data,status)=>{
+                    if(data==='1')
+                    {
+                        $(this).css("background","lightgreen");
+                    }
+                    else if(data==='0')
+                    {
+                        $(this).css("background","red");
+                    }
+                }
+                        );
+                
+            });
+function valid()                                    
+{ 
+    var fname = document.forms["form"]["fname"];               
+    var lname = document.forms["form"]["lname"];    
+    var email = document.forms["form"]["email"];  
+    var password =  document.forms["form"]["pword"];
+    
+    if (fname.value === "")                                  
+    { 
+        window.alert("Please enter your first name."); 
+        fname.focus(); 
+        return false; 
+    } 
+   
+    if (lname.value === "")                               
+    { 
+        window.alert("Please enter your lastname."); 
+        lname.focus(); 
+        return false; 
+    } 
+       
+    if (email.value === "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (password.value === "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+    
+    return true; 
+}</script>
+    </head>
+    <body bgcolor="oldlace">
+        <table align="center"><tr><td align="center"><h1>Welcome in sign up page</h1></td></tr></table>
+        <div>
+        <form method="get" name="form" onsubmit="valid()" action="enterdata">
+                <table align="center" border="7">
+                    <tr align="center">
+                        <td>
+                            First Name<input  type="text" name="fname" value="" style="background-color: whitesmoke" >
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            Last Name<input  type="text" name="lname" value="" style="background-color: whitesmoke" >
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            e-mail <input  type="email" name="email" value="" style="background-color: whitesmoke" >
+                        </td>
+                    <tr align="center">
+                        <td>
+                            Password <input  type="password" name="pword" value="" style="background-color: whitesmoke" >
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            telephone <input  type="number" name="tele" value="" style="background-color: whitesmoke" >
+                        </td>
+                    </tr>
+                   <tr align="center">
+                        <td>
+                             <input  type="Submit"  value="SUBMIT" style="background-color: peachpuff" >
+                        </td>
+                    </tr>
+                    
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

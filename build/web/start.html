@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Candidate Home page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            button{
+                border-style: none;
+                border-radius: 6px;
+                width: 60px;
+                background: #fdd835;
+                color: white;
+            }
+            button:hover{
+                color: greenyellow;
+                transition: 0.4s;
+            }
+        </style>
+        
+    </head>
+    <body >
+        <table align="center"><tr><td align="center"><h1>welcome</h1></td></tr></table>
+        <div>
+        <form method="post" name="form" action="Validator">
+                <table align="center" border="7" width="150px" height="150px">
+                    <tr align="center" bgcolor="powderblue">
+                        <td>
+                            <input class="but"  type="button"  onclick="window.location.href='signin.html';"
+                                    name="Sign in" 
+                                    value="Sign in"
+                                    style="background-color: white">
+                            <strong style="font-size: 35px;"> </strong>
+                        </td>
+                    </tr>
+                    <tr align="center" bgcolor="powderblue">
+                        <td >
+                            <input type="hidden" name="signup"/>
+                            <input class="but" type="button" name="Sign up"
+                                    onclick="window.location.href='signup.html';"
+                                    value="Sign up" style="background-color: white">
+                            <strong style="font-size: 35px;"> </strong>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

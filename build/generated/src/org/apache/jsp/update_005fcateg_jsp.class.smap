@@ -1,0 +1,12 @@
+SMAP
+update_005fcateg_jsp.java
+JSP
+*S JSP
+*F
++ 0 update_categ.jsp
+update_categ.jsp
+*L
+1,37:46
+38,24:84
+61,4:108
+*E
